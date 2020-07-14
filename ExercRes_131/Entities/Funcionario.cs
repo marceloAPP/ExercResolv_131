@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ExercRes_131.Entities
+﻿namespace ExercRes_131.Entities
 {
-    class Trabalhador
+    class Funcionario
     {
         public string Nome { get; set; }
         public int Horas { get; set; }
         public double ValorHora { get; set; }
 
-        public Trabalhador()
+        public Funcionario()
         {
         }
 
-        public Trabalhador(string nome, int horas, double valorHora)
+        public Funcionario(string nome, int horas, double valorHora)
         {
             Nome = nome;
             Horas = horas;

@@ -4,15 +4,15 @@ using System.Text;
 
 namespace ExercRes_131.Entities
 {
-    class TrabalhadorTerceirizado : Trabalhador
+    class FuncionarioTerceirizado : Funcionario
     {
         public double CobrancaAdicional { get; set; }
 
-        public TrabalhadorTerceirizado()
+        public FuncionarioTerceirizado()
         {
         }
 
-        public TrabalhadorTerceirizado(string nome, int horas, double valorHora, double cobrancaAdicional)
+        public FuncionarioTerceirizado(string nome, int horas, double valorHora, double cobrancaAdicional)
             : base(nome, horas, valorHora)
         {
             CobrancaAdicional = cobrancaAdicional;
@@ -20,11 +20,7 @@ namespace ExercRes_131.Entities
 
         public override double Pagamento()
         {
-            double valor = ValorHora * Horas;
-
-            valor += valor + (CobrancaAdicional * 110.0) / 100.0;
-
-            return valor;
+            return base.Pagamento() + (CobrancaAdicional * 110) / 100;
         }
 
     }
