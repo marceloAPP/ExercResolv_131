@@ -20,7 +20,7 @@ namespace ExercRes_131.Entities
 
         public override double Pagamento()
         {
-            return base.Pagamento() + (CobrancaAdicional * 110) / 100;
+            return base.Pagamento() + 1.1 * CobrancaAdicional;
         }
 
     }
